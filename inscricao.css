@@ -1,0 +1,127 @@
+body {
+ margin:0;
+ font-family:Segoe UI, Arial, sans-serif;
+ background:#f4f6f9;
+ color:#0f172a;
+}
+
+header {
+ background:#0f172a;
+ color:white;
+ padding:15px 22px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:16px;
+}
+
+header h1 {
+ margin:0;
+}
+
+nav a {
+ color:white;
+ margin:0;
+ padding:8px 6px;
+ text-decoration:none;
+}
+
+nav a.active {
+ color:#7dd3fc;
+ border-bottom:2px solid #7dd3fc;
+}
+
+.btn {
+ background:#38bdf8;
+ border:none;
+ padding:8px 12px;
+ border-radius:8px;
+ color:white;
+ width:auto;
+ cursor:pointer;
+}
+
+section {
+ max-width:1000px;
+ margin:25px auto;
+ padding:0 20px;
+}
+
+.intro {
+ text-align:center;
+}
+
+.intro p {
+ max-width:720px;
+ margin:0 auto;
+ color:#475569;
+}
+
+.content {
+ display:grid;
+ grid-template-columns:1fr 1.2fr;
+ gap:20px;
+ align-items:start;
+}
+
+.info-card,
+.booking-form {
+ background:white;
+ border-radius:12px;
+ padding:22px;
+ box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info-card ul {
+ margin-bottom:0;
+ padding-left:18px;
+}
+
+.booking-form label {
+ display:block;
+ margin-top:12px;
+ font-weight:700;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.booking-form button {
+ width:100%;
+ box-sizing:border-box;
+ margin:6px 0 8px;
+ padding:10px;
+ border-radius:8px;
+ border:1px solid #cbd5e1;
+}
+
+.booking-form textarea {
+ resize:none;
+}
+
+.booking-form button {
+ margin-top:14px;
+ background:#2563eb;
+ color:white;
+ border:none;
+ cursor:pointer;
+ font-weight:700;
+}
+
+#bookingMsg {
+ margin-top:10px;
+ font-size:14px;
+ font-weight:700;
+}
+
+@media (max-width:720px) {
+ header {
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-start;
+ }
+
+ .content {
+  grid-template-columns:1fr;
+ }
+}

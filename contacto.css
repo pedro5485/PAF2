@@ -1,0 +1,76 @@
+body {
+ font-family:Segoe UI, Arial, sans-serif;
+ text-align:center;
+ background:#f4f6f9;
+ margin:0;
+ color:#0f172a;
+}
+
+header {
+ background:#0f172a;
+ color:white;
+ padding:15px 22px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:16px;
+}
+
+header h1 {
+ margin:0;
+}
+
+nav a {
+ color:white;
+ margin:0;
+ padding:8px 6px;
+ text-decoration:none;
+}
+
+nav a.active {
+ color:#7dd3fc;
+ border-bottom:2px solid #7dd3fc;
+}
+
+.btn {
+ background:#38bdf8;
+ border:none;
+ padding:8px 12px;
+ border-radius:8px;
+ color:white;
+ width:auto;
+ cursor:pointer;
+}
+
+section {
+ max-width:1000px;
+ margin:25px auto;
+ padding:0 20px;
+}
+
+.grid-contactos {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;
+}
+
+.grid-contactos article,
+.faq article {
+ background:white;
+ padding:18px;
+ border-radius:12px;
+ text-align:left;
+ box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq article + article {
+ margin-top:12px;
+}
+
+@media (max-width:720px) {
+ header {
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-start;
+ }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscrição | DriveSafe</title>
+<link rel="stylesheet" href="inscricao.css">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+<header>
+<h1>DriveSafe</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="cursos.html">Cursos</a>
+<a href="horarios.html">Horários</a>
+<a href="inscricao.html">Inscrição</a>
+<a href="sobre.html">Sobre</a>
+<a href="contacto.html">Contactos</a>
+<button type="button" onclick="abrirModal()" class="btn auth-btn">Entrar</button>
+</nav>
+</header>
+
+<section class="intro">
+  <h2>Inscrição</h2>
+  <p>Preenche o formulário para iniciares a tua inscrição. A equipa confirma disponibilidade antes de qualquer pagamento.</p>
+</section>
+
+<section class="content">
+  <div class="info-card">
+    <h3>Antes de enviar</h3>
+    <ul>
+      <li>Escolhe o curso pretendido.</li>
+      <li>Confirma telefone e email.</li>
+      <li>Indica uma data preferida para começarmos o plano.</li>
+    </ul>
+  </div>
+
+  <form id="bookingForm" class="booking-form">
+    <label for="bookingName">Nome completo</label>
+    <input id="bookingName" type="text" placeholder="Ex: Ana Silva" required>
+
+    <label for="bookingEmail">Email</label>
+    <input id="bookingEmail" type="email" placeholder="Ex: ana@email.pt" required>
+
+    <label for="bookingPhone">Telefone</label>
+    <input id="bookingPhone" type="tel" placeholder="Ex: 912 345 678" required>
+
+    <label for="bookingCourse">Curso</label>
+    <select id="bookingCourse" required>
+      <option value="">Escolhe o curso</option>
+      <option value="Categoria B">Categoria B</option>
+      <option value="Categoria A">Categoria A</option>
+      <option value="Reciclagem de condução">Reciclagem de condução</option>
+    </select>
+
+    <label for="bookingDate">Data pretendida</label>
+    <input id="bookingDate" type="date" required>
+
+    <label for="bookingNotes">Observações</label>
+    <textarea id="bookingNotes" rows="5" placeholder="Disponibilidade, dúvidas ou informação útil"></textarea>
+
+    <button type="submit">Enviar inscrição</button>
+    <p id="bookingMsg"></p>
+  </form>
+</section>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

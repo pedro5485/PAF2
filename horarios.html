@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horários | DriveSafe</title>
+<link rel="stylesheet" href="horarios.css">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+<header>
+<h1>DriveSafe</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="cursos.html">Cursos</a>
+<a href="horarios.html">Horários</a>
+<a href="inscricao.html">Inscrição</a>
+<a href="sobre.html">Sobre</a>
+<a href="contacto.html">Contactos</a>
+<button type="button" onclick="abrirModal()" class="btn auth-btn">Entrar</button>
+</nav>
+</header>
+
+<section class="intro">
+  <h2>Consulta de Horários</h2>
+  <p>Vê os horários disponíveis para aulas teóricas, práticas e apoio ao código.</p>
+</section>
+
+<section class="grid-horarios">
+  <article class="box">
+    <h3>Aulas Teóricas</h3>
+    <ul>
+      <li>Segunda: 10:00 - 12:00</li>
+      <li>Quarta: 18:00 - 20:00</li>
+      <li>Sexta: 19:00 - 21:00</li>
+    </ul>
+  </article>
+  <article class="box">
+    <h3>Aulas Práticas</h3>
+    <ul>
+      <li>Segunda a Sexta: 08:00 - 12:00</li>
+      <li>Segunda a Sexta: 14:00 - 18:00</li>
+      <li>Sábado: 09:00 - 13:00</li>
+    </ul>
+  </article>
+  <article class="box">
+    <h3>Apoio ao Código</h3>
+    <ul>
+      <li>Terça: 17:30 - 19:00</li>
+      <li>Quinta: 17:30 - 19:00</li>
+      <li>Online: todos os dias</li>
+    </ul>
+  </article>
+</section>
+
+<section class="tabela">
+  <h2>Resumo Semanal</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Dia</th>
+        <th>Manhã</th>
+        <th>Tarde</th>
+        <th>Noite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Segunda</td>
+        <td>Prática</td>
+        <td>Prática</td>
+        <td>Livre</td>
+      </tr>
+      <tr>
+        <td>Terça</td>
+        <td>Prática</td>
+        <td>Prática</td>
+        <td>Apoio ao código</td>
+      </tr>
+      <tr>
+        <td>Quarta</td>
+        <td>Prática</td>
+        <td>Prática</td>
+        <td>Teórica</td>
+      </tr>
+      <tr>
+        <td>Quinta</td>
+        <td>Prática</td>
+        <td>Prática</td>
+        <td>Apoio ao código</td>
+      </tr>
+      <tr>
+        <td>Sexta</td>
+        <td>Prática</td>
+        <td>Prática</td>
+        <td>Teórica</td>
+      </tr>
+      <tr>
+        <td>Sábado</td>
+        <td>Prática</td>
+        <td>Encerrado</td>
+        <td>Encerrado</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="marcacao-aulas">
+  <h2>Marcar Aula</h2>
+  <p id="lessonMsg" class="lesson-msg">Escolhe uma aula disponível para marcar ou desmarcar.</p>
+  <div class="lesson-grid">
+    <article class="lesson-card" data-lesson-id="teorica-segunda-10" data-lesson-label="Aula teórica - Segunda, 10:00 - 12:00">
+      <div>
+        <h3>Aula Teórica</h3>
+        <p>Segunda, 10:00 - 12:00</p>
+      </div>
+      <button type="button" class="lesson-toggle">Marcar aula</button>
+    </article>
+    <article class="lesson-card" data-lesson-id="pratica-quarta-14" data-lesson-label="Aula prática - Quarta, 14:00 - 15:00">
+      <div>
+        <h3>Aula Prática</h3>
+        <p>Quarta, 14:00 - 15:00</p>
+      </div>
+      <button type="button" class="lesson-toggle">Marcar aula</button>
+    </article>
+    <article class="lesson-card" data-lesson-id="codigo-quinta-1730" data-lesson-label="Apoio ao código - Quinta, 17:30 - 19:00">
+      <div>
+        <h3>Apoio ao Código</h3>
+        <p>Quinta, 17:30 - 19:00</p>
+      </div>
+      <button type="button" class="lesson-toggle">Marcar aula</button>
+    </article>
+  </div>
+  <article class="my-lessons">
+    <h3>As minhas aulas</h3>
+    <ul id="myLessonsList">
+      <li>Ainda não tens aulas marcadas.</li>
+    </ul>
+  </article>
+</section>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

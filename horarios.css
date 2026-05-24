@@ -1,0 +1,191 @@
+body {
+ margin:0;
+ font-family:Segoe UI, Arial, sans-serif;
+ background:#f4f6f9;
+ color:#0f172a;
+}
+
+header {
+ background:#0f172a;
+ color:white;
+ padding:15px 22px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:16px;
+}
+
+header h1 {
+ margin:0;
+}
+
+nav a {
+ color:white;
+ margin:0;
+ padding:8px 6px;
+ text-decoration:none;
+}
+
+nav a.active {
+ color:#7dd3fc;
+ border-bottom:2px solid #7dd3fc;
+}
+
+.btn {
+ background:#38bdf8;
+ border:none;
+ padding:8px 12px;
+ border-radius:8px;
+ color:white;
+ width:auto;
+ cursor:pointer;
+}
+
+section {
+ max-width:1000px;
+ margin:25px auto;
+ padding:0 20px;
+}
+
+.intro,
+.cta {
+ text-align:center;
+}
+
+.intro p {
+ color:#475569;
+}
+
+.grid-horarios {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:16px;
+}
+
+.box,
+.tabela table,
+.my-lessons {
+ background:white;
+ border-radius:12px;
+ box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.box,
+.my-lessons {
+ padding:20px;
+}
+
+.marcacao-aulas {
+ display:none;
+ text-align:center;
+}
+
+.lesson-msg {
+ margin:0 auto 16px;
+ color:#475569;
+ font-weight:700;
+}
+
+.lesson-grid {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:16px;
+ text-align:left;
+}
+
+.lesson-card {
+ background:white;
+ border:2px solid transparent;
+ border-radius:12px;
+ box-shadow:0 5px 15px rgba(0,0,0,0.08);
+ padding:18px;
+ display:flex;
+ flex-direction:column;
+ gap:14px;
+ justify-content:space-between;
+ min-height:170px;
+}
+
+.lesson-card h3,
+.lesson-card p {
+ margin:0;
+}
+
+.lesson-card p {
+ margin-top:8px;
+ color:#475569;
+}
+
+.lesson-card button {
+ width:100%;
+ border:none;
+ border-radius:8px;
+ background:#2563eb;
+ color:white;
+ padding:10px 12px;
+ cursor:pointer;
+}
+
+.lesson-card button:disabled {
+ background:#94a3b8;
+ cursor:not-allowed;
+}
+
+.lesson-card.is-booked {
+ border-color:#16a34a;
+ background:#f0fdf4;
+}
+
+.lesson-card.is-booked button {
+ background:#dc2626;
+}
+
+.my-lessons {
+ margin-top:18px;
+ text-align:left;
+}
+
+.my-lessons ul {
+ margin-bottom:0;
+ padding-left:18px;
+}
+
+.box ul {
+ padding-left:18px;
+ margin-bottom:0;
+}
+
+table {
+ width:100%;
+ border-collapse:collapse;
+ overflow:hidden;
+}
+
+th,
+td {
+ padding:12px;
+ border-bottom:1px solid #e5e7eb;
+ text-align:center;
+}
+
+th {
+ background:#dbeafe;
+}
+
+.cta-link {
+ display:inline-block;
+ margin-top:12px;
+ padding:10px 16px;
+ background:#2563eb;
+ color:white;
+ border-radius:8px;
+ text-decoration:none;
+}
+
+@media (max-width:720px) {
+ header {
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-start;
+ }
+}
