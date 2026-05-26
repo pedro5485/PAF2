@@ -82,8 +82,8 @@
     const currentUser = getCurrentUser();
 
     document.querySelectorAll(".auth-btn").forEach(function (button) {
-      button.textContent = currentUser ? "Ola, " + currentUser : "Entrar";
-      button.title = currentUser ? "Clique para terminar sessao" : "";
+      button.textContent = currentUser ? "Olá, " + currentUser : "Entrar";
+      button.title = currentUser ? "Clique para terminar sessão" : "";
     });
 
     updateLessonSectionVisibility();
@@ -104,7 +104,7 @@
     list.innerHTML = "";
 
     if (!lessons.length) {
-      list.innerHTML = "<li>Ainda nao tens aulas marcadas.</li>";
+      list.innerHTML = "<li>Ainda não tens aulas marcadas.</li>";
       return;
     }
 
@@ -134,7 +134,7 @@
     });
 
     if (lessonMsg) {
-      lessonMsg.textContent = "Escolhe uma aula disponivel para marcar ou desmarcar.";
+      lessonMsg.textContent = "Escolhe uma aula disponível para marcar ou desmarcar.";
     }
 
     updateLessonsList();
@@ -164,24 +164,24 @@
       const observacoes = byId("bookingNotes").value.trim();
 
       if (!nome || !email || !telefone || !curso || !data) {
-        msg.textContent = "Preenche os campos obrigatorios.";
+        msg.textContent = "Preenche os campos obrigatórios.";
         return;
       }
 
-      const subject = "Nova inscricao DriveSafe - " + nome;
+      const subject = "Nova inscrição DriveSafe - " + nome;
       const body = [
-        "Nova inscricao recebida:",
+        "Nova inscrição recebida:",
         "",
         "Nome: " + nome,
         "Email: " + email,
         "Telefone: " + telefone,
         "Curso: " + curso,
         "Data pretendida: " + data,
-        "Observacoes: " + (observacoes || "Sem observacoes")
+        "Observações: " + (observacoes || "Sem observações")
       ].join("\n");
 
       window.location.href = "mailto:" + BOOKING_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      msg.textContent = "Vai abrir o teu email para enviares a inscricao.";
+      msg.textContent = "Vai abrir o teu email para enviares a inscrição.";
     });
   }
 
